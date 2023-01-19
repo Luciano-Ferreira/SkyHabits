@@ -1,19 +1,16 @@
-import { Habit } from './components/Habit';
 
 import './styles/global.scss';
+import { Header } from './components/Header';
+import { SummayTable } from './components/SummaryTable';
 
-function App() {
+export function App() {
   return (
-    <div>
-      <Habit completed={5} />
-      <Habit completed={2} />
-      <Habit completed={4} />
-      <Habit completed={10} />
-      <Habit completed={2} />
-      <Habit completed={9} />
-      <Habit completed={8} />
+    <div className='w-screen h-screen flex justify-center items-center'>
+      <div className='w-full max-w-5xl px-6 flex flex-col gap-16'>
+        <Header />
+        <SummayTable />
+      </div>
     </div>
   );
 }
 
-export default App;
