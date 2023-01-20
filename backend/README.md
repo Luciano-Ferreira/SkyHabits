@@ -12,3 +12,5 @@ DayHabit
 
 Criação do diagrama ERD
 Criação de seeds (dados para popular o meu banco)
+
+plano cartesiano
