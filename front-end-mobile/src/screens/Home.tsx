@@ -83,7 +83,7 @@ export function Home() {
                   amountOfHabits={dayWithHabits?.amount}
                   amountCompleted={dayWithHabits?.completed}
                   onPress={() =>
-                    navigate('habit', { date: date.toISOString() })
+                    {navigate('habit', { date: date.toISOString() })}
                   }
                 />
               );

@@ -8,12 +8,14 @@ import { Feather } from '@expo/vector-icons';
 import colors from 'tailwindcss/colors';
 
 import { api } from '../lib/axios';
+import { useNavigation } from '@react-navigation/native';
 
-const availableWeekDay = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sabado'];
+const availableWeekDay = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
 
 export function New() {
   const [title, setTitle] = useState('');
   const [weekDays, setWeekDays] = useState<number[]>([]);
+  const { navigate  } = useNavigation()
 
   function handleToggleWeekDay(weekDayIndex: number) {
     if (weekDays.includes(weekDayIndex)) {
@@ -34,6 +36,8 @@ export function New() {
       setWeekDays([]);
 
       Alert.alert(`Novo hábito`, `Habito criado com sucesso!`)
+
+      navigate('home');
     } catch (err) {
       console.log(err);
       Alert.alert('Erro', `Não foi possivel criar um novo hábito erro: ${err}`);
