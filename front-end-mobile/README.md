@@ -30,10 +30,10 @@ In your terminal or bash
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/Luciano-Ferreira/front-end-mobile.git
+$ git clone https://github.com/Luciano-Ferreira/SkyHabits.git
 
 # Access the directory
-$ cd front-end-mobile
+$ cd SkyHabits/front-end-mobile
 
 # Install all dependencies
 $ yarn 
