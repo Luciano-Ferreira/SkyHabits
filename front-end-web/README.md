@@ -1,0 +1,3 @@
+- Autenticação
+- Notificações / service workers
+- Perfil publico com grafico de resumo
