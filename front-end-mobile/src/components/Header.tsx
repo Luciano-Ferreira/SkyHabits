@@ -13,10 +13,10 @@ export function Header() {
       <Logo />
       <TouchableOpacity 
         activeOpacity={0.7} 
-        className='flex-row h-11 px-4 border border-purple-500 rounded-lg items-center'
+        className='flex-row h-11 px-4 border border-sky-500 rounded-lg items-center'
         onPress={() => navigate('new')}
       >
-        <Feather name="plus" color={colors.violet[500]} size={20} />
+        <Feather name="plus" color={colors.sky[500]} size={20} />
         <Text 
           className='text-white ml-3 font-semibold text-base'
         >

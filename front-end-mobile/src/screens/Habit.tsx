@@ -1,15 +1,17 @@
+import { useEffect, useState } from 'react';
 import { ScrollView, View, Text, Alert } from 'react-native';
 import { useRoute } from '@react-navigation/native';
-import { BackButton } from '../components/BackButton';
 import dayjs from 'dayjs';
+import clsx from 'clsx';
+
+import { BackButton } from '../components/BackButton';
 import { ProgressBar } from '../components/ProgressBar';
 import { CheckBox } from '../components/CheckBox';
-import { useEffect, useState } from 'react';
 import { Loading } from '../components/Loading';
+import { HabitEmpty } from '../components/HabitsEmpty';
+
 import { api } from '../lib/axios';
 import { generateProgressPercentage } from '../utils/generate-progress-percentage';
-import { HabitEmpty } from '../components/HabitsEmpty';
-import clsx from 'clsx';
 
 interface Params {
   date: string;

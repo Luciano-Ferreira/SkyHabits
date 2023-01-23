@@ -1,6 +1,6 @@
 import { TouchableOpacity, View, Text, TouchableOpacityProps } from 'react-native';
-
 import { Feather } from '@expo/vector-icons';
+
 import colors from 'tailwindcss/colors';
 import Animated, { RotateInUpLeft, RotateOutUpLeft } from 'react-native-reanimated';
 

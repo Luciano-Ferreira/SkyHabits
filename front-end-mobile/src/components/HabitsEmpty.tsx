@@ -9,7 +9,7 @@ export function HabitEmpty() {
     >
       Você ainda não está monitorando nenhum hábito{' '}
       <Text
-        className='text-violet-400 text-base underline active:text-violet-500'
+        className='text-sky-400 text-base underline active:text-blue-500'
         onPress={() => navigate('new')}
       >
         Comece criando um hábito.

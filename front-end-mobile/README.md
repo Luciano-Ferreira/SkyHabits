@@ -1,4 +1,5 @@
 - [NativeWind](https://www.nativewind.dev/)
+- Layout [Figma](https://www.figma.com/file/5jbHW05S9TttkQ5iofRxRF/Habits-(i)-(Community)?node-id=6%3A343&t=dKFWH05gt3ONi2FO-1)
 
 
 

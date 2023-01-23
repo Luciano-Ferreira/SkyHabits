@@ -28,6 +28,9 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "androidNavigationBar": {
+      "visible": "sticky-immersive"
     }
   }
 }
