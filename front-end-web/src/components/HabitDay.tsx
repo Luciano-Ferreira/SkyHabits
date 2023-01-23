@@ -3,19 +3,26 @@ import clsx from 'clsx';
 import { ProgressBar } from './ProgressBar';
 import dayjs from 'dayjs';
 import { HabitsList } from './HabitsList';
+import { useState } from 'react';
 
 interface Props {
   date: Date;
-  completed?: number;
+  defaultCompleted?: number;
   amount?: number;
 }
  
-export function HabitDay({ completed = 0, amount = 0, date }: Props) {
-  const  completedPercentage = amount > 0 ? Math.round((completed / amount) * 100) : 0;
+export function HabitDay({ defaultCompleted = 0, amount = 0, date }: Props) {
+  const [completed, setCompleted] = useState(defaultCompleted)
+
+  const completedPercentage = amount > 0 ? Math.round((completed / amount) * 100) : 0;
 
   const dayAndMonth = dayjs(date).format('DD/MM')
 
   const dayOfWeek = dayjs(date).format('dddd')
+
+  function handleCompletedChanged(completed: number) {
+    setCompleted(completed);
+  }
 
   return (
     <Popover.Root>
@@ -35,7 +42,7 @@ export function HabitDay({ completed = 0, amount = 0, date }: Props) {
           <span className='mt-1 font-extrabold leading-tight text-3xl'>{dayAndMonth}</span>
 
           <ProgressBar progress={completedPercentage}/>
-          <HabitsList />
+          <HabitsList  date={date} onCompletedChanged={handleCompletedChanged} />
 
           <Popover.Arrow className='fill-zinc-900' height={8} width={16} /> 
         </Popover.Content>

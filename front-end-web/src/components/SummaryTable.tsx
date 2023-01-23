@@ -24,9 +24,6 @@ export function SummayTable() {
   useEffect(() => {
     api.get('/summary').then(res => setSummary(res.data))
   }, [])
-  function isSame(date: string, arg1: string) {
-    throw new Error('Function not implemented.');
-  }
 
   return (
     <div className="w-full flex">
@@ -40,7 +37,7 @@ export function SummayTable() {
         })}
       </div>
       <div className='grid grid-rows-7 grid-flow-col gap-3'>
-        {summaryDates.map(date => {
+        {summary.length > 0 && summaryDates.map(date => {
           const dayInSummary = summary.find(day => {
             return dayjs(date).isSame(day.date, 'day')
           })
@@ -49,7 +46,7 @@ export function SummayTable() {
               key={date.toString()} 
               date={date}
               amount={dayInSummary?.amount} 
-              completed={dayInSummary?.completed} 
+              defaultCompleted={dayInSummary?.completed} 
             />
           )
         })}
