@@ -26,13 +26,13 @@ export function HabitDay({ defaultCompleted = 0, amount = 0, date }: Props) {
 
   return (
     <Popover.Root>
-      <Popover.Trigger className={clsx('h-10 w-10 bg-gray-900 border-2 border-zinc-800 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-violet-600 focus:ring-offset-2 focus:ring-offset-background', {
-        'bg-zinc-900 border-zinc-800': completedPercentage === 0,
-        'bg-violet-900 border-violet-700': completedPercentage > 0 && completedPercentage < 20,
-        'bg-violet-800 border-violet-600': completedPercentage >= 20 && completedPercentage < 40,
-        'bg-violet-700 border-violet-500': completedPercentage >= 40 && completedPercentage < 60,
-        'bg-violet-600 border-violet-500': completedPercentage >= 60 && completedPercentage < 80,
-        'bg-violet-500 border-violet-400': completedPercentage >= 80,
+      <Popover.Trigger className={clsx('h-10 w-10 bg-gray-900 border-2 border-zinc-800 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-sky-600 focus:ring-offset-2 focus:ring-offset-background', {
+        'bg-zinc-900 border-sky-900': completedPercentage === 0,
+        'bg-sky-900 border-sky-700': completedPercentage > 0 && completedPercentage < 20,
+        'bg-sky-800 border-sky-600': completedPercentage >= 20 && completedPercentage < 40,
+        'bg-sky-700 border-sky-500': completedPercentage >= 40 && completedPercentage < 60,
+        'bg-sky-600 border-sky-500': completedPercentage >= 60 && completedPercentage < 80,
+        'bg-sky-500 border-sky-400': completedPercentage >= 80,
 
 
       })} />

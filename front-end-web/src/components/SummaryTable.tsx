@@ -19,7 +19,7 @@ type Summary = Array<{
 }>
 
 
-export function SummayTable() {
+export function SummaryTable() {
   const [summary, setSummary] = useState<Summary>([])
   useEffect(() => {
     api.get('/summary').then(res => setSummary(res.data))
