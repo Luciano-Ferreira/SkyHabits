@@ -21,11 +21,11 @@
 
 ### Prerequisites
 
-Before you begin, you will need to have the following tools installed on your machine: [ExpoGo](https://expo.dev/client) [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/) and a package manager [Yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/). 
+Before you begin, you will need to have the following tools installed on your machine: [ExpoGo](https://expo.dev/client), [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/) and a package manager [Yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/). 
 
 In addition, it is necessary to have the [back-end](https://github.com/Luciano-Ferreira/SkyHabits/tree/main/backend) running.
 
-### ⏯️ Run aplication
+### ⏯️ Run application
 In your terminal or bash
 
 ```bash
