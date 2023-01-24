@@ -1,6 +1,8 @@
 ![Cover](https://user-images.githubusercontent.com/46464433/214169300-02ec4b4c-7003-42e7-b864-617064e54e77.png)
 ## Layout [Figma](https://www.figma.com/file/5jbHW05S9TttkQ5iofRxRF/Habits-(i)-(Community)?node-id=6%3A343&t=dKFWH05gt3ONi2FO-1)
 
+[Screencast from 23-01-2023 21:19:01.webm](https://user-images.githubusercontent.com/46464433/214183631-453a64ef-f942-49d9-918c-82a735cb768d.webm)
+
 
 ## Technologies :rocket:
 
@@ -47,6 +49,8 @@ $ yarn dev
 # or 
 $ npm run dev
 
+
+# Open the browser in http://localhost:5173/
 
 ```
 
