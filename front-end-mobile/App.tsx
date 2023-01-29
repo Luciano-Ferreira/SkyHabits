@@ -1,5 +1,6 @@
 import './src/lib/dayjs';
-import { StatusBar } from 'react-native';
+import { Button, StatusBar } from 'react-native';
+import * as Notifications from 'expo-notifications'
 
 import { 
   useFonts, 
@@ -12,6 +13,14 @@ import {
 import { Loading } from './src/components/Loading';
 import { Routes } from './src/routes';
 
+Notifications.setNotificationHandler({
+  handleNotification: async () => ({
+    shouldShowAlert: true,
+    shouldPlaySound: true,
+    shouldSetBadge: false
+  }),
+})
+
 export default function App() {
   // as fontes precisa carregar antes do app ser renderizado
   const [fontsLoaded] = useFonts({
@@ -21,6 +30,26 @@ export default function App() {
     Inter_800ExtraBold
   });
 
+  async function getScheduleNotification() {
+    const schedules = await Notifications.getAllScheduledNotificationsAsync();
+    console.log(schedules)
+  }
+
+  async function setScheduleNotification() {
+    const trigger = new Date(Date.now());
+
+    trigger.setMinutes(trigger.getMinutes() + 1);
+
+    await Notifications.scheduleNotificationAsync({
+      content: {
+        title: 'Olá 🥲',
+        body: 'Você já praticou algum SkyHabit hoje?'
+      },
+      trigger
+    });
+  }
+
+
   if (!fontsLoaded) {
     return (
       <Loading />
@@ -28,6 +57,7 @@ export default function App() {
   }
   return (
     <>
+      {/**<Button title='Enviar notificação'  onPress={setScheduleNotification} /> */}
       <Routes />
       <StatusBar barStyle='light-content' backgroundColor='transparent' translucent />
     </>
