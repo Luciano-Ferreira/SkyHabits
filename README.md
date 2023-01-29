@@ -74,3 +74,8 @@ Made with ♥ by Luciano Silva :wave: [Get in touch!](https://www.linkedin.com/i
 ## More
 
 [links](https://efficient-sloth-d85.notion.site/Trilha-Ignite-562e3516c7574fb7be75ff01fbb41f54)
+
+- Push Manager
+- web-push (backend)
+
+[Notes](https://www.notion.so/luciano-silva/a8c12270cffa4e919dcb6bc9867386b2)
